@@ -350,6 +350,7 @@ GameObject:
   - component: {fileID: 3739772312239754965}
   - component: {fileID: 1368539107847178848}
   - component: {fileID: 7001145613556373541}
+  - component: {fileID: -7501881413141352192}
   m_Layer: 0
   m_Name: Female Enemy
   m_TagString: BouncyObstacle
@@ -385,7 +386,7 @@ Animator:
   m_GameObject: {fileID: 3739772312232475891}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 3cefbbfe8c81fbb4283daa116169ef21, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ac07fe1d7bab0b740928628ad9c292bc, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -417,8 +418,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 3739772312232475891}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
+  m_Radius: 0.7
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -430,6 +431,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-7501881413141352192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3739772312232475891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4562676182b63224c8925641eb0a3c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 25
 --- !u!1 &3739772312232475895
 GameObject:
   m_ObjectHideFlags: 0
