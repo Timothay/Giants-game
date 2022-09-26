@@ -16,7 +16,16 @@ public class BounceManager : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("BouncyObstacle"))
 		{
-			bounceForce = new Vector3(1000f, 1000f, 1000f);
+			bounceForce = new Vector3(Random.Range(-1000.0f, 1000.0f), Random.Range(0f, 100.0f), Random.Range(-1000.0f, 1000.0f));
+			rb.AddForce(bounceForce);
+		}
+	}
+
+	void OnTriggerStay(Collider other)
+	{
+		if (other.gameObject.CompareTag("BouncyObstacle"))
+		{
+			bounceForce = new Vector3(Random.Range(-1000.0f, 1000.0f), Random.Range(0f, 200.0f), Random.Range(-1000.0f, 1000.0f));
 			rb.AddForce(bounceForce);
 		}
 	}

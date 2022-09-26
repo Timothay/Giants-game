@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
 	private void Update()
     {
 		MyInput();
-		//SpeedControl();
 		//rb.drag = 5;
     }
 
@@ -45,16 +44,5 @@ public class PlayerMovement : MonoBehaviour
 		moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
 		rb.AddForce(moveDirection.normalized * moveSpeed, ForceMode.Force);
-    }
-
-	private void SpeedControl()
-    {
-		Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-
-		if(flatVel.magnitude > moveSpeed)
-        {
-			Vector3 limitedVel = flatVel.normalized * moveSpeed;
-			rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
-        }
     }
 }
