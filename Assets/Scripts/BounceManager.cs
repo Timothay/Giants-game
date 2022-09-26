@@ -18,6 +18,12 @@ public class BounceManager : MonoBehaviour
 		{
 			bounceForce = new Vector3(Random.Range(-1000.0f, 1000.0f), Random.Range(0f, 100.0f), Random.Range(-1000.0f, 1000.0f));
 			rb.AddForce(bounceForce);
+		} else if (other.gameObject.CompareTag("Pickable"))
+        {
+			other.gameObject.GetComponent<BoxCollider>().enabled = false;
+			other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+
+			GameObject.Find("ScoreText").GetComponent<ScoreManager>().score += 1;
 		}
 	}
 
