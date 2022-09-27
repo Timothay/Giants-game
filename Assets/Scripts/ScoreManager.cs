@@ -27,4 +27,9 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score : " + score.ToString();
 
     }
+    public void SaveHighScore()
+    {
+        PlayerPrefs.SetInt("High score", highscore);
+        PlayerPrefs.Save();
+    }
 }

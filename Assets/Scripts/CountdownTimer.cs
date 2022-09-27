@@ -27,6 +27,7 @@ public class CountdownTimer : MonoBehaviour
         if(currentTime <= 0)
         {
             currentTime = 0;
+            GameObject.Find("ScoreText").GetComponent<ScoreManager>().SaveHighScore();
             countText.enabled = false;
             scoreText.enabled = false;
             gameOverText.enabled = true;
