@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class CountdownTimer : MonoBehaviour
@@ -9,6 +10,9 @@ public class CountdownTimer : MonoBehaviour
     float startingTime = 120;
 
     public TextMeshProUGUI countText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI gameOverText;
+    public Image panel;
 
     void Start()
     {
@@ -23,6 +27,10 @@ public class CountdownTimer : MonoBehaviour
         if(currentTime <= 0)
         {
             currentTime = 0;
+            countText.enabled = false;
+            scoreText.enabled = false;
+            gameOverText.enabled = true;
+            panel.enabled = true;
         }
     }
 }
