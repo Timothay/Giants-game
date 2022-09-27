@@ -4677,15 +4677,27 @@ PrefabInstance:
       objectReference: {fileID: 786553949}
     - target: {fileID: 6787487898659146923, guid: ff5df5dcc4c559b46a355731ce988cc7, type: 3}
       propertyPath: bounceSounds.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6787487898659146923, guid: ff5df5dcc4c559b46a355731ce988cc7, type: 3}
       propertyPath: bounceSounds.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 3b0aa3a0c75f23f46be083493c0bfbd0, type: 3}
+    - target: {fileID: 6787487898659146923, guid: ff5df5dcc4c559b46a355731ce988cc7, type: 3}
+      propertyPath: bounceSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d641552eeb730144a8adf412f348857, type: 3}
+    - target: {fileID: 6787487898659146923, guid: ff5df5dcc4c559b46a355731ce988cc7, type: 3}
+      propertyPath: bounceSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f1307e9947ce8314c9ba00b1c3a73c27, type: 3}
+    - target: {fileID: 9132937105620797873, guid: ff5df5dcc4c559b46a355731ce988cc7, type: 3}
+      propertyPath: m_Volume
+      value: 0.525
+      objectReference: {fileID: 0}
     - target: {fileID: 9132937105620797873, guid: ff5df5dcc4c559b46a355731ce988cc7, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9132937105620797873, guid: ff5df5dcc4c559b46a355731ce988cc7, type: 3}
       propertyPath: m_PlayOnAwake
@@ -7596,7 +7608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1154290485
 Transform:
   m_ObjectHideFlags: 0
@@ -12680,6 +12692,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2134867812453212139, guid: 302852559f536334386a3f7122610815, type: 3}
+      propertyPath: highScoreText
+      value: 
+      objectReference: {fileID: 2130399237}
     - target: {fileID: 2134867812795887400, guid: 302852559f536334386a3f7122610815, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -12768,7 +12784,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3420992346198682517, guid: 302852559f536334386a3f7122610815, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 302852559f536334386a3f7122610815, type: 3}
 --- !u!1001 &1960841494
 PrefabInstance:
@@ -13966,6 +13983,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2531695971905646257, guid: a02689bc032fdac4f9dc74f60756c33f, type: 3}
   m_PrefabInstance: {fileID: 2100902678}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2130399237 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8465782813060754212, guid: 302852559f536334386a3f7122610815, type: 3}
+  m_PrefabInstance: {fileID: 1952254347}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2144778195
 PrefabInstance:
   m_ObjectHideFlags: 0
