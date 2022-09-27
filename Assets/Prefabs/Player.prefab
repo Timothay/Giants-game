@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7ced767c33066418f159c617238468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bananaPrefab: {fileID: 6929388463939371982, guid: c3d84339c46a8f04b9a05f1bee4bcd7f, type: 3}
 --- !u!82 &9132937105620797873
 AudioSource:
   m_ObjectHideFlags: 0

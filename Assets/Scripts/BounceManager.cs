@@ -5,11 +5,16 @@ using UnityEngine;
 public class BounceManager : MonoBehaviour
 {
 	private Rigidbody rb;
+	private int currentPosition;
 	private Vector3 bounceForce;
-	
+	private Vector3[] positions = new Vector3[9] { new Vector3(-45f, 0.1f, -10f), new Vector3(-77f, 0.1f, -34f), new Vector3(20f, 0.1f, -34f), new Vector3(75f, 0.1f, -8f), new Vector3(62.5f, 0.1f, -2f), new Vector3(55f, 0.1f, 43.5f), new Vector3(50f, 0.1f, -63f), new Vector3(-96f, 0.1f, -95f), new Vector3(-60f, 0.1f, -55f) };
+	public GameObject bananaPrefab;
+
 	private void Start()
 	{
 		rb = GetComponent<Rigidbody>();
+		currentPosition = 0;
+
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -20,9 +25,14 @@ public class BounceManager : MonoBehaviour
 			rb.AddForce(bounceForce);
 		} else if (other.gameObject.CompareTag("Pickable"))
         {
+			currentPosition += 1;
+			if (currentPosition == 9)
+            {
+				currentPosition = 0;
+            }
 			other.gameObject.GetComponent<BoxCollider>().enabled = false;
 			other.gameObject.GetComponent<MeshRenderer>().enabled = false;
-
+			GameObject newBanana = Instantiate(bananaPrefab, positions[currentPosition], Quaternion.identity);
 			GameObject.Find("ScoreText").GetComponent<ScoreManager>().score += 1;
 		}
 	}
